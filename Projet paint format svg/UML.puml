@@ -1,0 +1,53 @@
+@startuml GrawEditor
+top to bottom direction
+
+class GrawEditor
+namespace Array {
+  class Static <class T, size_t N>
+
+  class Fixed <class T>
+
+  class Dynamic <class T>
+  Fixed <|-- Dynamic
+}
+class Liste
+GrawEditor *-- Liste
+Liste *-- Array::Dynamic
+Liste *-- Array::Static
+Liste *-- Array::Fixed
+enum colortype
+class Color
+colortype *-- Color
+namespace Geom2D{
+  class Point
+  class Transform
+  class FillProperty
+  Base <|-- Disk
+  FillProperty <|-- Disk
+  Base <|-- Ellipse
+  FillProperty <|-- Ellipse
+  Base <|-- Polygon
+  FillProperty <|-- Polygon
+  Array::Static <|-- Triangle
+  Base <|-- Triangle
+  FillProperty <|-- Triangle
+  Base <|-- Rectangle
+  FillProperty <|-- Rectangle
+  Rectangle <|-- Square
+  FillProperty *-- colortype
+
+  Transform <|-- Base
+  namespace Curve{
+    Stroke <|-- Base
+    Base <|- Segment
+    Array::Static <|-- Segment
+    Base <|-- Polyline
+    Array::Static <|-- Polyline
+    Base <|-- Circle
+  }
+  Base <|-- Curve::Base
+}
+  Fixed *-- Point
+  Dynamic *-- Point
+  Static *-- Point
+@enduml

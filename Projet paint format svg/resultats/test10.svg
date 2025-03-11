@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" >
+<polyline points="200,200 300,300" stroke="red" stroke-width="2" fill="none" opacity="0.5"/>
+<rect x="100" y="100" width="300" height="100" fill="green" stroke="blue" stroke-width="1" opacity="0.5"/>
+</svg>

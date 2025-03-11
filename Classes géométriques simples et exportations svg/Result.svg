@@ -1,0 +1,3 @@
+<!DOCTYPE html>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" >
+<rect x="200" y="350" width="100" height="300" fill="red " transform="rotate(0,250,500)" /><rect x="200" y="350" width="100" height="300" fill="green " transform="rotate(90,250,500)" /></svg>
